@@ -1,0 +1,75 @@
+.listIcon {
+	margin-top: 30px;
+	text-align: center;
+	/* 	background-color:red; */
+	font-size: 30px;
+	font-family: Lobster;
+}
+
+.listIcon a {
+	text-decoration: none;
+	color: #464646;
+}
+
+.listIcon a img {
+	margin-bottom:10px;
+	transition: transform 0.95s;
+}
+
+.listIcon a img:hover {
+	transform: rotate(-20deg)
+}
+
+#tableNotif tbody {
+	counter-reset: row-num;
+}
+
+#tableNotif tbody tr {
+	counter-increment: row-num;
+}
+
+#tableNotif tbody tr td:first-child::before {
+	content: counter(row-num);
+}
+#tableTeacher tbody {
+	counter-reset: row-num;
+}
+
+#tableTeacher tbody tr {
+	counter-increment: row-num;
+}
+
+#tableTeacher tbody tr td:first-child::before {
+	content: counter(row-num);
+}
+#tableStudent tbody {
+	counter-reset: row-num;
+}
+
+#tableStudent tbody tr {
+	counter-increment: row-num;
+}
+
+#tableStudent tbody tr td:first-child::before {
+	content: counter(row-num);
+}
+fieldset {
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px groove #DADADA;
+  height: 250px;
+
+}
+
+.tableFixHead          { overflow-y: auto; height: 180px; }
+.tableFixHead thead th { position: sticky; top: 0; }
+
+/* Just common table stuff. Really. */
+.tableFixHead table  { border-collapse: collapse; width: 100%; }
+.tableFixHead table th, td { padding: 8px 11px; }
+.tableFixHead table th     { background:#eee; }

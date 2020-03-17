@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>Welcome to EEC</title>
+<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+<link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/font.css">
+</head>
+
+<body>
+    <!-- get All Student -->
+   <table class="table">
+      <tr th:each="student:${listStudent}">
+         <td th:text="${student.studentId}"> 
+         </td>
+          <td th:text="${student.name}"> 
+         </td>
+          <td th:text="${student.score}"> 
+         </td>
+      </tr>
+   </table>
+</body>
+</html>
